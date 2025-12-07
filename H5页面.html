@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5页面测试</title>
+    <style>
+		 :root {
+		   --vw-unit: 1vw;
+		   --vh-unit: 1vh;
+		   --vmin-unit: 1vmin;
+		}
+		 * {
+		   margin: 0;
+		   padding: 0;
+		   box-sizing: border-box;
+		   font-family: "Microsoft Yahei", sans-serif;
+		 }
+		 body {
+		   background-color: #f9fafc;
+		   color: #333;
+		   min-height: 100vh;
+		 }
+		 .container {
+		   width: 100%;
+		   min-height: 100vh;
+		   padding: calc(var(--vh-unit) * 2) 5%;
+		 }
+		 .banner {
+		   background: #e6f7ff url('img/屏幕截图 2025-12-07 200702.png') no-repeat center center;
+		   background-size: cover;
+		   padding: calc(var(--vh-unit) * 4) 5%;
+		   border-radius: 12px;
+		   text-align: center;
+		   margin-bottom: calc(var(--vh-unit) * 2);
+		 }
+		 .banner h1 {
+		   font-size: clamp(18px, 4vw, 28px);
+		   color: #ff3807;
+		   margin-bottom: calc(var(--vh-unit) * 1);
+		 }
+		 .banner p {
+		   font-size: clamp(16px, 3vw, 20px);
+		   color: #ffe943;
+		   font-weight: bold;
+		 }
+		 .section-title {
+		   font-size: clamp(18px, 3.5vw, 22px);
+		   font-weight: bold;
+		   margin-bottom: calc(var(--vh-unit) * 2);
+		 }
+		 .app-nav {
+		   display: grid;
+		   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		   gap: calc(var(--vmin-unit) * 2);
+		   margin-bottom: calc(var(--vh-unit) * 3);
+		 }
+		 .app-item {
+		     display: flex;
+		     flex-direction: column;
+		     align-items: center;
+		     justify-content: center;
+		     background-color: #fff;
+		     padding: calc(var(--vmin-unit) * 3);
+		     border-radius: 8px;
+		     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+		     cursor: pointer;
+		     transition: transform 0.2s ease;
+		     text-align: center;
+		 }
+		 .app-item img {
+		     width: clamp(30px, 8vw, 50px);
+		     height: clamp(30px, 8vw, 50px);
+		     margin-bottom: calc(var(--vh-unit) * 1);
+		     display: block;
+		 }
+		 .activity-list, .book-list {
+		   display: grid;
+		   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		   gap: calc(var(--vmin-unit) * 2);
+		   margin-bottom: calc(var(--vh-unit) * 3);
+		 }
+		.app-item span {
+		    font-size: 14px;
+		    color: #666;
+		    width: 100%;
+		}
+        .activity-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .activity-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        .activity-card:hover {
+            transform: translateY(-3px);
+        }
+        .activity-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .activity-card p {
+            padding: 15px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .book-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 15px;
+            transition: transform 0.2s ease;
+        }
+        .book-card:hover {
+            transform: translateY(-3px);
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .book-card span {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <h1>摆烂小王 遇见H5</h1>
+            <p>这东西到底怎么做</p >
+        </div>
+        <h2 class="section-title">常见应用</h2>
+        <div class="app-nav">
+            <div class="app-item">
+                <img src='img/精彩活动.png' alt="精彩活动">
+                <span>精彩活动</span>
+            </div>
+            <div class="app-item">
+                <img src='img/主题书单.png' alt="主题书单">
+                <span>主题书单</span>
+            </div>
+            <div class="app-item">
+                <img src='img/积分商城.png' alt="积分商城">
+                <span>积分商城</span>
+            </div>
+            <div class="app-item">
+                <img src='img/学习打卡.png' alt="学习打卡">
+                <span>学习打卡</span>
+            </div>
+            <div class="app-item">
+                <img src='img/文化慕课.png' alt="文化慕课">
+                <span>文化慕课</span>
+            </div>
+            <div class="app-item">
+                <img src='img/才艺视界.png' alt="才艺视界">
+                <span>才艺视界</span>
+            </div>
+            <div class="app-item">
+                <img src='img/学术资源.png' alt="学术资源">
+                <span>学术资源</span>
+            </div>
+            <div class="app-item">
+                <img src='img/经典朗读.png' alt="经典朗读">
+                <span>经典朗读</span>
+            </div>
+        </div>
+        <h2 class="section-title">活动推荐</h2>
+        <div class="activity-list">
+            <div class="activity-card">
+                <img src='img/PIC00001.JPG' alt="端午答题闯关活动">
+                <p>党日活动1</p >
+            </div>
+            <div class="activity-card">
+                <img src='img/PIC00008.JPG' alt="我与图书馆的故事">
+                <p>党日活动2</p >
+            </div>
+        </div>
+        <h2 class="section-title">精选照片</h2>
+        <div class="book-list">
+            <div class="book-card">
+                <img src='img/PIC00027.JPG' alt="红楼梦">
+                <span>1</span>
+            </div>
+            <div class="book-card">
+                <img src='img/PIC00221.JPG' alt="人工智能">
+                <span>2</span>
+            </div>
+            <div class="book-card">
+                <img src='img/PIC00356.JPG' alt="人工智能">
+                <span>3</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
